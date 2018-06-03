@@ -1,36 +1,33 @@
-# IRRCalc
-Incident Rate Ratio Calculator
+# FMEA
+Failure Mode and Effects Analysis with R
 Tony Gojanovic
 
 
 ## Background
 
-This simple calcultor computes the ratio of two incident rates (r1/r2) along with a 95% confidence interals.  Specifically, calculating the following quantities:
-
-IRR = (cases_post_intervention/time_post_intervention) / (cases_pre_intervention/time_pre_intervention)
-
-CI = exp(ln(IRR) +/- 1.96*sqrt(1/cases_pre_intervention + 1/cases_post_intervention))
-
-So, IRR is Incident Rate Ratio and in the abouve, caes pre and post are measured in "person years" but other types of standardizing factors may be used as well.
+This package creates a set of graphs depicting the risk of an FMEA.  Specifically, severity, occurrence and detection of an FMEA exercise are plotted.
 
 ## Create an Example Package in R 
 
-Package: IRRCalc  
-GitHub:  https://github.com/cowboy2718/IRRCalc
+Package: FMEA 
+GitHub:  https://github.com/cowboy2718/FMEA
 
 ## Data Source
 
-Data for this calculator is input by the user.
+Data for this function is input by the user.  The requirements are an Excel file with the following named fields:
+
+item_no
+severity
+occurrence
+detection
+
+Data must be tidy from Excel.
 
 ### Travis Badge
 
 The following indicates the status of the most recent build with Travis:
 
-[![Build Status](https://travis-ci.org/cowboy2718/IRRCalc.svg?branch=master)](https://travis-ci.org/cowboy2718/IRRCalc)
-
 ### References
-
-Algoritms based on Algorithm based on "Comparing two incident rate ratios,” https://stats.stackexchange.com/questions/297994/comparing-two-incidence-rate-ratios
 
 ## Useful Links in the Development of this Package:
 
