@@ -1,0 +1,13 @@
+Package: FMEA
+Type: Package
+Title: Failure MOde Effects Analysis with R
+Version: 0.1.0
+Author: person("Tony", "Gojanovic", email = "tonygojanovic@gmail.com",
+                  role = c("aut", "cre"))
+Maintainer: Tony Gojanovic <tony.gojanovic@somewhere.net>
+Description: Provide descriptive risk charts from an FMEA exercise.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+VignetteBuilder: utils  
+RoxygenNote: 6.0.1
