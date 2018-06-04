@@ -1,5 +1,5 @@
 # FMEA
-Failure Mode and Effects Analysis with R
+Failure Mode and Effects Analysis (FMEA) with R  
 Tony Gojanovic
 
 
@@ -9,36 +9,36 @@ This package creates a set of graphs depicting the risk of an FMEA.  Specificall
 
 ## Create an Example Package in R 
 
-Package: FMEA 
+Package: FMEA   
 GitHub:  https://github.com/cowboy2718/FMEA
 
 ## Data Source
 
 Data for this function is input by the user (typically the FMEA session is captured in an Excel workbook).  The following fields are what the FMEA package will use when imported.  Data must be tidy.
 
-|Field          | Description                                 | Data type
- -------------- | --------------------------------------------| ------------------------
-|item_no        | risk item identifier                        | Character string
-|process_step   | process or design phase                     | Character string
-|function       | what the item's function does               | Character string
-|requirements   | what are criteria for success               | Character string    
-|failure        | how the item might fail                     | Character string
-|effect         | what is the effect of failure               | Character string
-|severity       | the failure severity rating                 | Integer (typically between 1 and 10)
-|cause          | cause of the failure                        | Character string
-|occurrence     | the likelihood of the cause                 | Integer (typically between 1 and 10)
-|hazard         | hazard = severity x occurrence              | Calculated numeric
-|controls       | what will detect the failure or cause       | Character string
-|detection      | the effectiveness of the controls           | Integer (typically between 1 and 10)
-|rpn            | rpn = severity x occurrence x detection     | Calculated numeric
-|mitigation     | how to mitigate the failure                 | Character string
-|responsibility | who owns the mitigation activity            | Character string
-|date           | when the mitigation will be completed       | Date
-|car_status     | status of the mitigation activity           | Character string
-|sev_1          | updated severity after mitigation           | Integer (typically between 1 and 10)
-|occ_1          | updated occurrence after mitigation         | Integer (typically between 1 and 10)
-|det_1          | updated detection after mitigation          | Integer (typically between 1 and 10)
-|RPN            | updated risk priority number                | Calculated numeric
+|Field          | Description                                 | Data type                           |
+ -------------- | --------------------------------------------| ------------------------------------|  
+|item_no        | risk item identifier                        | Character string                    |
+|process_step   | process or design phase                     | Character string                    |
+|function       | what the item's function does               | Character string                    |
+|requirements   | what are criteria for success               | Character string                    |
+|failure        | how the item might fail                     | Character string                    |
+|effect         | what is the effect of failure               | Character string                    |
+|severity       | the failure severity rating                 | Integer (typically between 1 and 10)|
+|cause          | cause of the failure                        | Character string                    |
+|occurrence     | the likelihood of the cause                 | Integer (typically between 1 and 10)|
+|hazard         | hazard = severity x occurrence              | Calculated numeric                  |
+|controls       | what will detect the failure or cause       | Character string                    |
+|detection      | the effectiveness of the controls           | Integer (typically between 1 and 10)|
+|rpn            | rpn = severity x occurrence x detection     | Calculated numeric                  |
+|mitigation     | how to mitigate the failure                 | Character string                    |
+|responsibility | who owns the mitigation activity            | Character string                    |
+|date           | when the mitigation will be completed       | Date                                |
+|car_status     | status of the mitigation activity           | Character string                    |
+|sev_1          | updated severity after mitigation           | Integer (typically between 1 and 10)|
+|occ_1          | updated occurrence after mitigation         | Integer (typically between 1 and 10)|
+|det_1          | updated detection after mitigation          | Integer (typically between 1 and 10)|
+|RPN            | updated risk priority number                | Calculated numeric                  |
 
 ### Travis Badge
 
