@@ -14,7 +14,7 @@ GitHub:  https://github.com/cowboy2718/FMEA
 
 ## Data Source
 
-Data for this function is input by the user.  The requirements are an Excel file with the following named fields:
+Data for this function is input by the user (typically the FMEA session is captured in an Excel workbook).  The following fields are what the FMEA package will use when imported.  Data must be tidy.
 
 |Field          | Description                                 | Data type
  -------------- | --------------------------------------------| ------------------------
@@ -39,9 +39,6 @@ Data for this function is input by the user.  The requirements are an Excel file
 |occ_1          | updated occurrence after mitigation         | Integer (typically between 1 and 10)
 |det_1          | updated detection after mitigation          | Integer (typically between 1 and 10)
 |RPN            | updated risk priority number                | Calculated numeric
-
-
-Data must be tidy format (typically the FMEA session is captured in an Excel workbook).
 
 ### Travis Badge
 
