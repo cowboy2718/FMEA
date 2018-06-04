@@ -16,10 +16,12 @@ GitHub:  https://github.com/cowboy2718/FMEA
 
 Data for this function is input by the user.  The requirements are an Excel file with the following named fields:
 
-item_no
-severity
-occurrence
-detection
+Field               Description
+-----------         -----------------------------
+item_no  
+severity  
+occurrence  
+detection  
 
 Data must be tidy from Excel.
 
