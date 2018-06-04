@@ -1,13 +1,13 @@
 # FMEA
 Failure Mode and Effects Analysis (FMEA) with R  
-Tony Gojanovic
-
+Tony Gojanovic  
+June 2018  
 
 ## Background
 
 This package creates a set of graphs depicting the risk of an FMEA.  Specifically, severity, occurrence and detection of an FMEA exercise are plotted.
 
-## Create an Example Package in R 
+## Package Name and Location
 
 Package: FMEA   
 GitHub:  https://github.com/cowboy2718/FMEA
