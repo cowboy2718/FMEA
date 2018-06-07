@@ -44,7 +44,7 @@ Data for this function is input by the user (typically the FMEA session is captu
 
 The following indicates the status of the most recent build with Travis:
 
-### References
+## References
 
 The following are useful resources in understanding Failure Modes and Effects Analysis and risk assessment and management.
 
@@ -70,4 +70,4 @@ The following were very useful links used in the development of this project.
 * [Creating RStudio projects from GitHub Repositories, Nicholas Reich ](https://www.youtube.com/watch?v=YxZ8J2rqhEM) 
 * [Developing R Packages | Part 7: Unit Testing, Colin Pistell](https://www.youtube.com/watch?v=u2KDSY_8Ay4) 
 * [Travis CI Tutorial - How to Use Travis CI with Github for Continuous Integration, Full Stack Academy](https://www.youtube.com/watch?v=Uft5KBimzyk)
-* [Create Awesome HTML Table with knitr::kable and kableExtra, Hao Zhu](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
+* [Create Awesome HTML Table with knitr::kable and kableExtra, Hao Zhu](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html)
