@@ -8,7 +8,7 @@
 #' @importFrom dplyr mutate %>%
 #' @return Returns a modified data frame to be used in the graphical depiction of risk.
 #' @examples df<-prep_data(fmea_worksheet_name)
-#' @note Geom_jitter is by-passed with this function to allow ggrepel to work more efficiently.
+#' @note Geom_jitter is not needed with this function to allow ggrepel to work more efficiently with labels.
 #' @export
 
 # Create a dataframe for analysis and add a jitter component.
@@ -25,3 +25,4 @@ prep_data<-function(filename){
   return(rme_working)                                # return the data set with new columns
 }
 
+# Create a hazard or disutility graph

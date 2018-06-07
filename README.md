@@ -46,6 +46,20 @@ The following indicates the status of the most recent build with Travis:
 
 ### References
 
+The following are useful resources in understanding Failure Modes and Effects Analysis and risk assessment and management.
+
+Carlson, Carl S., *Effective FMEAs: Achieving Safe, Reliable, and Economical Products and Processes Using Failure Mode and Effects Analysis*, John Wiley and Sons, New York, 2012, p. 164. 
+
+Dussault, Heather B., "The Evolution and Practical Applications of Failure Modes and Effects Analyses", *RADC-TR-83-73*, Rome Air Development Center, Air Force Systems Command, Griffiss Air Force Base, New York, March 1983.
+
+Haimes, Yacov Y., *Risk Modeling, Assessment, and Management*, 2nd edition, John Wiley & Sons, New York, 2004.
+
+MacKenzie, Cameron, "Summarizing Risk Using Risk Measures and Risk Indices," peer-reviewed draft, Defense Resource Management Institute, Naval Post Graduate Schook, 2015, http://faculty.nps.edu/camacken/docs/MacKenzie%20Summarizing%20Risk%20Using%20Risk%20Measures%20and%20Risk%20Indices.pdf
+
+Roland, Harold E., and Brian Moriarty, *System Safety Engineering and Managements*, John Wiley and Sons, New York, 1983, pp. 187 - 193.
+
+Tversky, Amos, and Daniel Kahneman, "Judgement Under Uncertainty: Heuristics and Biases," *Science*, New Series, Vol. 185, No. 4157. (Sep. 27, 1974), pp. 1124-1131.
+
 ## Useful Links in the Development of this Package:
 
 The following were very useful links used in the development of this project.
@@ -56,3 +70,4 @@ The following were very useful links used in the development of this project.
 * [Creating RStudio projects from GitHub Repositories, Nicholas Reich ](https://www.youtube.com/watch?v=YxZ8J2rqhEM) 
 * [Developing R Packages | Part 7: Unit Testing, Colin Pistell](https://www.youtube.com/watch?v=u2KDSY_8Ay4) 
 * [Travis CI Tutorial - How to Use Travis CI with Github for Continuous Integration, Full Stack Academy](https://www.youtube.com/watch?v=Uft5KBimzyk)
+* [Create Awesome HTML Table with knitr::kable and kableExtra, Hao Zhu](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
