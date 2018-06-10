@@ -11,8 +11,5 @@ Encoding: UTF-8
 LazyData: true
 VignetteBuilder: utils  
 RoxygenNote: 6.0.1
+Suggests: dplyr
 Imports: dplyr
-Suggests: knitr,
-    rmarkdown,
-    utils,
-    dplyr
