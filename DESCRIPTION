@@ -11,4 +11,11 @@ Encoding: UTF-8
 LazyData: true
 VignetteBuilder: utils  
 RoxygenNote: 6.0.1
-Suggests: dplyr
+Suggests: dplyr,
+    ggrepel,
+    ggplot2,
+    magrittr
+Imports: ggplot2,
+    dplyr,
+    ggrepel,
+    magrittr

@@ -2,3 +2,7 @@
 
 export(risk_controls)
 export(risk_disutility)
+import(dplyr)
+import(ggplot2)
+import(ggrepel)
+import(magrittr)
