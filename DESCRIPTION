@@ -12,4 +12,3 @@ LazyData: true
 VignetteBuilder: utils  
 RoxygenNote: 6.0.1
 Suggests: dplyr
-Imports: dplyr
