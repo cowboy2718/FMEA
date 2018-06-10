@@ -6,7 +6,6 @@
 #' @description  This function uses an imported data set and creates a disutility graph. 
 #' @param filename Filename as an imported data frame (usually from an FMEA study). Must possess the fields named item_no, process_step, severity,occurrence, and detection.
 #' @return Returns a modified data frame to be used in the graphical depiction of risk.
-#' @importFrom stats, rnorm
 #' @import dplyr ggplot2 ggrepel magrittr
 #' @examples plot_file<-disutility(filename)
 #' @note Geom_jitter is not needed with this function to allow ggrepel to work more efficiently with labels. Specifically, a random jitter is added to severity, occurence and detection based on a standard normal variable (mean = 0 and sd = 0.25)
@@ -58,7 +57,6 @@ risk_disutility<-function(filename){
 #' @description  This function uses an imported data set and creates a risk control graph based on detection and occurrence. 
 #' @param filename Filename as an imported data frame (usually from an FMEA study). Must possess the fields named item_no, process_step, severity,occurrence, and detection.
 #' @return Returns a modified data frame to be used in the graphical depiction of risk controls.
-#' @importFrom stats, rnorm
 #'  @import dplyr ggplot2 ggrepel magrittr
 #' @examples plot_file<-risk_controls(filename)
 #' @note Geom_jitter is not needed with this function to allow ggrepel to work more efficiently with labels. Specifically, a random jitter is added to severity, occurence and detection based on a standard normal variable (mean = 0 and sd = 0.25)

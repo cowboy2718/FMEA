@@ -11,6 +11,7 @@ risk_controls(filename)
 }
 \value{
 Returns a modified data frame to be used in the graphical depiction of risk controls.
+ @import dplyr ggplot2 ggrepel magrittr
 }
 \description{
 This function uses an imported data set and creates a risk control graph based on detection and occurrence.
@@ -19,5 +20,5 @@ This function uses an imported data set and creates a risk control graph based o
 Geom_jitter is not needed with this function to allow ggrepel to work more efficiently with labels. Specifically, a random jitter is added to severity, occurence and detection based on a standard normal variable (mean = 0 and sd = 0.25)
 }
 \examples{
-plot_file<-risk_controls(fmea_worksheet_name)
+plot_file<-risk_controls(filename)
 }
