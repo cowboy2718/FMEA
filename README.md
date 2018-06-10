@@ -5,7 +5,19 @@ June 2018
 
 ## Background
 
-This package creates a set of graphs depicting the risk of an FMEA.  Specifically, severity, occurrence and detection of an FMEA exercise are plotted.
+This package creates a set of graphs for risk assessment and risk management. Specifically, severity, occurrence and detection as obtained through, for example, an FMEA exercise, are plotted.  However, other tools may also be used to obtaing severity, occurrence and detection values.
+
+## R Libraries
+
+The libraries ggplot, ggrepel and dplyr are used with this package.
+
+### Disutility Index | Risk Assessment
+
+A **disutility graph** or **hazard graph** is a scatterplot in which the undesirability of a failure is based on failure severity and the occurrence (likelihood) of potential causes or mechanisms of that failure happening.  In this package, random "jitter" is added to the severity and likelihood values in order to provide a more interpretable graph (severity and occurrence values are typically discrete).
+
+### Controls | Risk Management
+
+Detection ability is plotted against occurrence orlikelihood of potential causes or mechanisms of failure.  Essentially, it depicts the state of risk management controls. Random "jitter" is added to the detection and likelihood values in order to provide a more interpretable graph.
 
 ## Package Name and Location
 
@@ -14,37 +26,37 @@ GitHub:  https://github.com/cowboy2718/FMEA
 
 ## Data Source
 
-Data for this function is input by the user (typically the FMEA session is captured in an Excel workbook).  The following fields are what the FMEA package will use when imported.  Data must be tidy.
+Data for this function is input by the user (typically the FMEA session is captured in an Excel workbook).  The following fields are what a typical FMEA worksheet possesses.  Data must be tidy.
 
-|Field          | Description                                 | Data type                           |
- -------------- | --------------------------------------------| ------------------------------------|  
-|item_no        | risk item identifier                        | Character string                    |
-|process_step   | process or design phase                     | Character string                    |
-|function       | what the item's function does               | Character string                    |
-|requirements   | what are criteria for success               | Character string                    |
-|failure        | how the item might fail                     | Character string                    |
-|effect         | what is the effect of failure               | Character string                    |
-|severity       | the failure severity rating                 | Integer (typically between 1 and 10)|
-|cause          | cause of the failure                        | Character string                    |
-|occurrence     | the likelihood of the cause                 | Integer (typically between 1 and 10)|
-|hazard         | hazard = severity x occurrence              | Calculated numeric                  |
-|controls       | what will detect the failure or cause       | Character string                    |
-|detection      | the effectiveness of the controls           | Integer (typically between 1 and 10)|
-|rpn            | rpn = severity x occurrence x detection     | Calculated numeric                  |
-|mitigation     | how to mitigate the failure                 | Character string                    |
-|responsibility | who owns the mitigation activity            | Character string                    |
-|date           | when the mitigation will be completed       | Date                                |
-|car_status     | status of the mitigation activity           | Character string                    |
-|sev_1          | updated severity after mitigation           | Integer (typically between 1 and 10)|
-|occ_1          | updated occurrence after mitigation         | Integer (typically between 1 and 10)|
-|det_1          | updated detection after mitigation          | Integer (typically between 1 and 10)|
-|RPN            | updated risk priority number                | Calculated numeric                  |
+|Field          | Description                                 | Data type                           | Required by                     |
+ -------------- | --------------------------------------------| ------------------------------------| --------------------------------| 
+|item_no        | risk item identifier                        | Character string                    | risk_disutility; risk_controls  |
+|process_step   | process or design phase                     | Character string                    | risk_disutility; risk_controls  |
+|function       | what the item's function does               | Character string                    |                                 |
+|requirements   | what are criteria for success               | Character string                    |                                 |
+|failure        | how the item might fail                     | Character string                    |                                 |
+|effect         | what is the effect of failure               | Character string                    |                                 |
+|severity       | the failure severity rating                 | Integer (typically between 1 and 10)| risk_disutility; risk_controls  |
+|cause          | cause of the failure                        | Character string                    |                                 |
+|occurrence     | the likelihood of the cause                 | Integer (typically between 1 and 10)| risk_disutility; risk_controls  |
+|hazard         | hazard = severity x occurrence              | Calculated numeric                  |                                 |
+|controls       | what will detect the failure or cause       | Character string                    |                                 |
+|detection      | the effectiveness of the controls           | Integer (typically between 1 and 10)| risk_disutility; risk_controls  |
+|rpn            | rpn = severity x occurrence x detection     | Calculated numeric                  |                                 |
+|mitigation     | how to mitigate the failure                 | Character string                    |                                 |
+|responsibility | who owns the mitigation activity            | Character string                    |                                 |
+|date           | when the mitigation will be completed       | Date                                |                                 |
+|car_status     | status of the mitigation activity           | Character string                    |                                 |
+|sev_1          | updated severity after mitigation           | Integer (typically between 1 and 10)|                                 |
+|occ_1          | updated occurrence after mitigation         | Integer (typically between 1 and 10)|                                 |
+|det_1          | updated detection after mitigation          | Integer (typically between 1 and 10)|                                 |
+|RPN            | updated risk priority number                | Calculated numeric                  |                                 |
 
 ### Travis Badge
 
 The following indicates the status of the most recent build with Travis:
 
-## References
+## Risk Assessment and Management References:
 
 The following are useful resources in understanding Failure Modes and Effects Analysis and risk assessment and management.
 
