@@ -25,7 +25,7 @@ risk_disutility<-function(filename){
                                # return the data set with new columns
   
   p<-ggplot(rme_working,aes(sev,occ))+geom_point(color="red",size=4)+geom_label_repel(aes(label=item_no,fill=process_step), box.padding =  0.5)+theme(legend.position = "bottom",axis.title=element_text(size=14),plot.title = element_text(size=14))
-  p<-p+ggtitle("750 MHL Bottle Sharing Project | Disutility Graph by Failure Item No.")+xlab("Severity")+ylab("Occurrence")
+  p<-p+ggtitle("Disutility Graph by Failure Item No.")+xlab("Severity")+ylab("Occurrence")
   p<-p+scale_x_continuous(breaks = c(1,2,3,4,5,6,7,8,9,10,11),limits = c(1,11))+scale_y_continuous(breaks=c(1,2,3,4,5,6,7,8,9,10,11),limits=c(1,11))
   
   # Draw Low Risk Region is created using the segment function in ggplot.
@@ -77,7 +77,7 @@ risk_controls<-function(filename){
   # Create a risk management scatterplot based on detection (controls) and occurrence of failure mechanisms or causes.
   
   p1<-ggplot(rme_working,aes(det,occ))+geom_point(color="red",size=4)+geom_label_repel(aes(label=item_no,fill=process_step), box.padding =  0.5)+theme(legend.position = "bottom",axis.title=element_text(size=14),plot.title = element_text(size=14))
-  p1<-p1+ggtitle("750 MHL Bottle Sharing Project | Detection (risk controls) by Failure Item No.")+xlab("Detection (risk controls)")+ylab("Occurrence")
+  p1<-p1+ggtitle("Detection (risk controls) by Failure Item No.")+xlab("Detection (risk controls)")+ylab("Occurrence")
   p1<-p1+scale_x_continuous(breaks = c(1,2,3,4,5,6,7,8,9,10,11),limits = c(1,11))+scale_y_continuous(breaks=c(1,2,3,4,5,6,7,8,9,10,11),limits=c(1,11))
   p1<-p1 + annotate("text", x =2.4, y = 11,size=4.5, label = "Controls")+annotate("text", x = 9, y = 11, label = "Lack of Controls",size=4.5)
   p1<-p1+geom_segment(aes(x = 3.0, y = 11, xend = 8, yend = 11, colour = "red"),arrow = arrow(length = unit(3,"mm")))
