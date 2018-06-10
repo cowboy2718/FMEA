@@ -5,6 +5,7 @@
 #' Plotting a disutility or hazard graph of risk.
 #' @description  This function uses an imported data set and creates a disutility graph. 
 #' @param filename Filename as an imported data frame (usually from an FMEA study). Must possess the fields named item_no, process_step, severity,occurrence, and detection.
+#' @importFrom dplyr mutate %>%
 #' @return Returns a modified data frame to be used in the graphical depiction of risk.
 #' @examples disutility(fmea_worksheet_name)
 #' @note Geom_jitter is not needed with this function to allow ggrepel to work more efficiently with labels. Specifically, a random jitter is added to severity, occurence and detection based on a standard normal variable (mean = 0 and sd = 0.25)
@@ -20,7 +21,7 @@ risk_disutility<-function(filename){
   df.z<-as.data.frame(rnorm(row_value,0,0.25))       # Random jitter colums
   df<-cbind(df.x,df.y,df.z)                          # Create a data frame with three random jitter columns
   colnames(df)<-c("x","y","z")                       # Add column names
-  rme_working<-rme_working%>%mutate(sev=severity+df$x)%>%mutate(occ=occurrence+df$y)%>%mutate(det=detection+df$z) # Create new jitter variables
+  rme_working<-rme_working%>%dplyr::mutate(sev=severity+df$x)%>%mutate(occ=occurrence+df$y)%>%mutate(det=detection+df$z) # Create new jitter variables
                                # return the data set with new columns
   
   p<-ggplot(rme_working,aes(sev,occ))+geom_point(color="red",size=4)+geom_label_repel(aes(label=item_no,fill=process_step), box.padding =  0.5)+theme(legend.position = "bottom",axis.title=element_text(size=14),plot.title = element_text(size=14))
@@ -55,6 +56,7 @@ risk_disutility<-function(filename){
 #' Potting a scatterplot of risk management controls.
 #' @description  This function uses an imported data set and creates a risk control graph based on detection and occurrence. 
 #' @param filename Filename as an imported data frame (usually from an FMEA study). Must possess the fields named item_no, process_step, severity,occurrence, and detection.
+#' @importFrom dplyr mutate %>%
 #' @return Returns a modified data frame to be used in the graphical depiction of risk controls.
 #' @examples risk_controls(fmea_worksheet_name)
 #' @note Geom_jitter is not needed with this function to allow ggrepel to work more efficiently with labels. Specifically, a random jitter is added to severity, occurence and detection based on a standard normal variable (mean = 0 and sd = 0.25)
@@ -69,7 +71,7 @@ risk_controls<-function(filename){
   df.z<-as.data.frame(rnorm(row_value,0,0.25))       # Random jitter colums
   df<-cbind(df.x,df.y,df.z)                          # Create a data frame with three random jitter columns
   colnames(df)<-c("x","y","z")                       # Add column names
-  rme_working<-rme_working%>%mutate(sev=severity+df$x)%>%mutate(occ=occurrence+df$y)%>%mutate(det=detection+df$z) # Create new jitter variables
+  rme_working<-rme_working%>%dplyr::mutate(sev=severity+df$x)%>%mutate(occ=occurrence+df$y)%>%mutate(det=detection+df$z) # Create new jitter variables
   # return the data set with new columns
   
   # Create a risk management scatterplot based on detection (controls) and occurrence of failure mechanisms or causes.

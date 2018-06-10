@@ -2,3 +2,5 @@
 
 export(risk_controls)
 export(risk_disutility)
+importFrom(dplyr,"%>%")
+importFrom(dplyr,mutate)
