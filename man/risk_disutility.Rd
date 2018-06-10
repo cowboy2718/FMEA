@@ -19,5 +19,5 @@ This function uses an imported data set and creates a disutility graph.
 Geom_jitter is not needed with this function to allow ggrepel to work more efficiently with labels. Specifically, a random jitter is added to severity, occurence and detection based on a standard normal variable (mean = 0 and sd = 0.25)
 }
 \examples{
-df<-disutility(fmea_worksheet_name)
+disutility(fmea_worksheet_name)
 }
