@@ -56,6 +56,8 @@ Data for this function is input by the user (typically the FMEA session is captu
 
 The following indicates the status of the most recent build with Travis:
 
+[![Build Status](https://travis-ci.org/cowboy2718/FMEA.svg?branch=master)](https://travis-ci.org/cowboy2718/FMEA)
+
 ## Risk Assessment and Management References:
 
 The following are useful resources in understanding Failure Modes and Effects Analysis and risk assessment and management.
