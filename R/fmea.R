@@ -7,7 +7,6 @@
 #' @param filename Filename as an imported data frame (usually from an FMEA study). Must possess the fields named item_no, process_step, severity,occurrence, and detection.
 #' @return Returns a modified data frame to be used in the graphical depiction of risk.
 #' @import dplyr ggplot2 ggrepel magrittr
-#' @examples risk_utility(filename)
 #' @note Geom_jitter is not needed with this function to allow ggrepel to work more efficiently with labels. Specifically, a random jitter is added to severity, occurence and detection based on a standard normal variable (mean = 0 and sd = 0.25)
 #' @export
 
@@ -58,7 +57,6 @@ risk_disutility<-function(filename){
 #' @param filename Filename as an imported data frame (usually from an FMEA study). Must possess the fields named item_no, process_step, severity,occurrence, and detection.
 #' @return Returns a modified data frame to be used in the graphical depiction of risk controls.
 #' @import dplyr ggplot2 ggrepel magrittr
-#' @examples risk_controls(filename)
 #' @note Geom_jitter is not needed with this function to allow ggrepel to work more efficiently with labels. Specifically, a random jitter is added to severity, occurence and detection based on a standard normal variable (mean = 0 and sd = 0.25)
 #' @export
 
