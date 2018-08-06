@@ -78,8 +78,6 @@ Note: Verification may involve recreation of the problems to determine if suspec
 Note: A “show me” will be a demonstration of validation i.e. that a sustainable system of reliable detection controls exist. 
 
 
-
-
 ### Travis Badge
 
 The following indicates the status of the most recent build with Travis:
