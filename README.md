@@ -1,13 +1,13 @@
-# FMEA
+## FMEA
 Failure Mode and Effects Analysis (FMEA) with R  
 Tony Gojanovic  
 June 2018  
 
-## Background
+### Background
 
 This package creates a set of graphs for risk assessment and risk management. Specifically, severity, occurrence and detection as obtained through, for example, an FMEA exercise, are plotted.  However, other tools may also be used to obtaing severity, occurrence and detection values.
 
-## R Libraries
+### R Libraries
 
 The libraries ggplot, ggrepel and dplyr are used with this package.
 
@@ -19,12 +19,12 @@ A **disutility graph** or **hazard graph** is a scatterplot in which the undesir
 
 Detection ability is plotted against occurrence orlikelihood of potential causes or mechanisms of failure.  Essentially, it depicts the state of risk management controls. Random "jitter" is added to the detection and likelihood values in order to provide a more interpretable graph.
 
-## Package Name and Location
+### Package Name and Location
 
 Package: FMEA   
 GitHub:  https://github.com/cowboy2718/FMEA
 
-## Data Source
+### Data Source
 
 Data for this function is input by the user (typically the FMEA session is captured in an Excel workbook).  The following fields are what a typical FMEA worksheet possesses.  Data must be tidy.
 
@@ -51,6 +51,34 @@ Data for this function is input by the user (typically the FMEA session is captu
 |occ_1          | updated occurrence after mitigation         | Integer (typically between 1 and 10)|                                 |
 |det_1          | updated detection after mitigation          | Integer (typically between 1 and 10)|                                 |
 |RPN            | updated risk priority number                | Calculated numeric                  |                                 |
+|validated      | was the risk mitigation action validated?   | yes/no                              |                                 |
+|verified       | was the risk mitigation action verified?    | yes/no                              |                                 |
+|evidence       | evidence type                               | categorical                         |                                 |
+|reference      | evidence reference                          | character                           |                                 |
+|date_1         | update date for mitigation                  | date                                |                                 |
+
+### Validation and Verification
+
+Validation and verification of risk mitigation is the key to a successful risk mitigation program. Specifically,
+
+**Verification** assures that in fact a proper corrective action has been implemented regarding a specific risk mitigation action.
+Was the mitigation action completed and was the documentation completed to support all of the necessary changes?  Was the change visible and trained, etc.? 
+Note: Verification may involve recreation of the problems to determine if suspect root causes are had been addressed related to the risk. This step can be by-passed since some risk states may be too risky to recreate. 
+
+**Validation** requires proof that the risk mitigation action is sustainable and effective.  Does the mitigation action actually work the way that it should.
+
+•	Systems are in place to sustain corrective action and prevent future occurrences. 
+
+•	Reliable detection controls are in place and are tested. 
+
+•	Does the mitigation action actually work the way that it should. 
+
+•	Must be sustainable and robust.  Makeshift or temporary fixes do not apply as sustainable.  
+
+Note: A “show me” will be a demonstration of validation i.e. that a sustainable system of reliable detection controls exist. 
+
+
+
 
 ### Travis Badge
 
@@ -58,7 +86,7 @@ The following indicates the status of the most recent build with Travis:
 
 [![Build Status](https://travis-ci.org/cowboy2718/FMEA.svg?branch=master)](https://travis-ci.org/cowboy2718/FMEA)
 
-## Risk Assessment and Management References:
+### Risk Assessment and Management References:
 
 The following are useful resources in understanding Failure Modes and Effects Analysis and risk assessment and management.
 
@@ -74,7 +102,7 @@ Roland, Harold E., and Brian Moriarty, *System Safety Engineering and Management
 
 Tversky, Amos, and Daniel Kahneman, "Judgement Under Uncertainty: Heuristics and Biases," *Science*, New Series, Vol. 185, No. 4157. (Sep. 27, 1974), pp. 1124-1131.
 
-## Useful Links in the Development of this Package:
+### Useful Links in the Development of this Package:
 
 The following were very useful links used in the development of this project.
 
