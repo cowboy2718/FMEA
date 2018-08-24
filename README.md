@@ -28,34 +28,33 @@ GitHub:  https://github.com/cowboy2718/FMEA
 
 Data for this function is input by the user (typically the FMEA session is captured in an Excel workbook).  The following fields are what a typical FMEA worksheet possesses.  Data must be tidy.
 
-|Field          | Description                                 | Data type                           | Required by                     |
- -------------- | --------------------------------------------| ------------------------------------| --------------------------------| 
-|item_no        | risk item identifier                        | Character string                    | risk_disutility; risk_controls  |
-|process_step   | process or design phase                     | Character string                    | risk_disutility; risk_controls  |
-|function       | what the item's function does               | Character string                    |                                 |
-|requirements   | what are criteria for success               | Character string                    |                                 |
-|failure        | how the item might fail                     | Character string                    |                                 |
-|effect         | what is the effect of failure               | Character string                    |                                 |
-|severity       | the failure severity rating                 | Integer (typically between 1 and 10)| risk_disutility; risk_controls  |
-|cause          | cause of the failure                        | Character string                    |                                 |
-|occurrence     | the likelihood of the cause                 | Integer (typically between 1 and 10)| risk_disutility; risk_controls  |
-|hazard         | hazard = severity x occurrence              | Calculated numeric                  |                                 |
-|controls       | what will detect the failure or cause       | Character string                    |                                 |
-|detection      | the effectiveness of the controls           | Integer (typically between 1 and 10)| risk_disutility; risk_controls  |
-|rpn            | rpn = severity x occurrence x detection     | Calculated numeric                  |                                 |
-|mitigation     | how to mitigate the failure                 | Character string                    |                                 |
-|responsibility | who owns the mitigation activity            | Character string                    |                                 |
-|date           | when the mitigation will be completed       | Date                                |                                 |
-|car_status     | status of the mitigation activity           | Character string                    |                                 |
-|sev_1          | updated severity after mitigation           | Integer (typically between 1 and 10)|                                 |
-|occ_1          | updated occurrence after mitigation         | Integer (typically between 1 and 10)|                                 |
-|det_1          | updated detection after mitigation          | Integer (typically between 1 and 10)|                                 |
-|RPN            | updated risk priority number                | Calculated numeric                  |                                 |
-|validated      | was the risk mitigation action validated?   | yes/no                              |                                 |
-|verified       | was the risk mitigation action verified?    | yes/no                              |                                 |
-|evidence       | evidence type                               | categorical                         |                                 |
-|reference      | evidence reference                          | character                           |                                 |
-|date_1         | update date for mitigation                  | date                                |                                 |
+|Field            | Description                                 | Data type                           | Required by                     |
+ --------------   | --------------------------------------------| ------------------------------------| --------------------------------| 
+|item_no          | risk item identifier                        | Character string                    | risk_disutility; risk_controls  |
+|process_step     | process or design phase                     | Character string                    | risk_disutility; risk_controls  |
+|function         | what the item's function does               | Character string                    |                                 |
+|requirements     | what are criteria for success               | Character string                    |                                 |
+|failure          | how the item might fail                     | Character string                    |                                 |
+|effect           | what is the effect of failure               | Character string                    |                                 |
+|severity         | the failure severity rating                 | Integer (typically between 1 and 10)| risk_disutility; risk_controls  |
+|cause            | cause of the failure                        | Character string                    |                                 |
+|occurrence       | the likelihood of the cause                 | Integer (typically between 1 and 10)| risk_disutility; risk_controls  |
+|hazard           | hazard = severity x occurrence              | Calculated numeric                  |                                 |
+|controls         | what will detect the failure or cause       | Character string                    |                                 |
+|detection        | the effectiveness of the controls           | Integer (typically between 1 and 10)| risk_disutility; risk_controls  |
+|rpn              | rpn = severity x occurrence x detection     | Calculated numeric                  |                                 |
+|mitigation       | how to mitigate the failure                 | Character string                    |                                 |
+|responsibility   | who owns the mitigation activity            | Character string                    |                                 |
+|date             | when the mitigation will be completed       | Date                                |                                 |
+|mitigation_status| status of the mitigation activity           | Character string                    |                                 |
+|sev_1            | updated severity after mitigation           | Integer (typically between 1 and 10)|                                 |
+|occ_1            | updated occurrence after mitigation         | Integer (typically between 1 and 10)|                                 |
+|det_1            | updated detection after mitigation          | Integer (typically between 1 and 10)|                                 |
+|RPN              | updated risk priority number                | Calculated numeric                  |                                 |
+|verified         | was the risk mitigation action verified ?   | yes/no                              |                                 |
+|validated        | was the risk mitigation action validated?   | yes/no                              |                                 |
+|record           | evidence or record type                     | categorical                         |                                 |
+|date_1           | update date for mitigation                  | date                                |                                 |
 
 ### Validation and Verification
 
