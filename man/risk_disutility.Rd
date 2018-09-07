@@ -18,3 +18,16 @@ This function uses an imported data set and creates a disutility graph.
 \note{
 Geom_jitter is not needed with this function to allow ggrepel to work more efficiently with labels. Specifically, a random jitter is added to severity, occurence and detection based on a standard normal variable (mean = 0 and sd = 0.25)
 }
+\examples{
+\dontrun{
+
+# Use the working file with a standard format to create a hazard or disutility graphic.
+
+library(ggplot2)
+library(dplyr)
+library(ggrepel)
+
+risk_disutility(fmea_working_file)
+
+}
+}

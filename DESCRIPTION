@@ -10,7 +10,7 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 VignetteBuilder: utils  
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
 Suggests: dplyr,
     ggrepel,
     ggplot2,

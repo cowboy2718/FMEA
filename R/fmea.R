@@ -9,8 +9,19 @@
 #' @import dplyr ggplot2 ggrepel magrittr
 #' @note Geom_jitter is not needed with this function to allow ggrepel to work more efficiently with labels. Specifically, a random jitter is added to severity, occurence and detection based on a standard normal variable (mean = 0 and sd = 0.25)
 #' @export
-
-# Create a disutility or hazard graph based on severity and occurrence.
+#' 
+#' @examples 
+#' \dontrun{
+#' 
+#' # Use the working file with a standard format to create a hazard or disutility graphic.
+#' 
+#' library(ggplot2)
+#' library(dplyr)
+#' library(ggrepel)
+#' 
+#' risk_disutility(fmea_working_file)
+#' 
+#' }
 
 risk_disutility<-function(filename){
   rme_working<-filename                              # Calculates the number of rows in the FMEA worksheet
@@ -59,6 +70,18 @@ risk_disutility<-function(filename){
 #' @import dplyr ggplot2 ggrepel magrittr
 #' @note Geom_jitter is not needed with this function to allow ggrepel to work more efficiently with labels. Specifically, a random jitter is added to severity, occurence and detection based on a standard normal variable (mean = 0 and sd = 0.25)
 #' @export
+#' @examples 
+#' \dontrun{
+#' 
+#' # Use the working file with a standard format to create a risk controls graphic.
+#' 
+#' library(ggplot2)
+#' library(dplyr)
+#' library(ggrepel)
+#' 
+#' risk_controls(fmea_working_file)
+#' 
+#' }
 
 risk_controls<-function(filename){
   
