@@ -49,8 +49,9 @@ Data for this function is input by the user (typically the FMEA session is captu
 |mitigation_status| status of the mitigation activity           | Character string                    |                                 |
 |sev_1            | updated severity after mitigation           | Integer (typically between 1 and 10)|                                 |
 |occ_1            | updated occurrence after mitigation         | Integer (typically between 1 and 10)|                                 |
+|haz_1            | updated hazard                              | Calculated numeric                  |                                 |
 |det_1            | updated detection after mitigation          | Integer (typically between 1 and 10)|                                 |
-|RPN              | updated risk priority number                | Calculated numeric                  |                                 |
+|rpn_1            | updated risk priority number                | Calculated numeric                  |                                 |
 |verified         | was the risk mitigation action verified ?   | yes/no                              |                                 |
 |validated        | was the risk mitigation action validated?   | yes/no                              |                                 |
 |record           | evidence or record type                     | categorical                         |                                 |
