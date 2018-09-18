@@ -3,26 +3,38 @@ Failure Mode and Effects Analysis (FMEA) with R
 Tony Gojanovic  
 June 2018  
 
+***
+
 ### Background
 
-This package creates a set of graphs for risk assessment and risk management. Specifically, severity, occurrence and detection as obtained through, for example, an FMEA exercise, are plotted.  However, other tools may also be used to obtaing severity, occurrence and detection values.
+This package creates a set of graphs for risk assessment and risk management. Specifically, severity, occurrence and detection as obtained through, for example, an FMEA exercise, are plotted.  However, other tools may also be used to obtaing severity, occurrence and detection value.
+
+***
 
 ### R Libraries
 
 The libraries ggplot, ggrepel and dplyr are used with this package.
 
+***
+
 ### Disutility Index | Risk Assessment
 
 A **disutility graph** or **hazard graph** is a scatterplot in which the undesirability of a failure is based on failure severity and the occurrence (likelihood) of potential causes or mechanisms of that failure happening.  In this package, random "jitter" is added to the severity and likelihood values in order to provide a more interpretable graph (severity and occurrence values are typically discrete).
+
+***
 
 ### Controls | Risk Management
 
 Detection ability is plotted against occurrence orlikelihood of potential causes or mechanisms of failure.  Essentially, it depicts the state of risk management controls. Random "jitter" is added to the detection and likelihood values in order to provide a more interpretable graph.
 
+***
+
 ### Package Name and Location
 
 Package: FMEA   
 GitHub:  https://github.com/cowboy2718/FMEA
+
+***
 
 ### Data Source
 
@@ -36,26 +48,26 @@ Data for this function is input by the user (typically the FMEA session is captu
 |requirements     | what are criteria for success               | Character string                    |                                 |
 |failure          | how the item might fail                     | Character string                    |                                 |
 |effect           | what is the effect of failure               | Character string                    |                                 |
-|severity         | the failure severity rating                 | Integer (typically between 1 and 10)| risk_disutility; risk_controls  |
+|severity         | the failure severity rating                 | Integer (1 to 10)| risk_disutility; risk_controls  |
 |cause            | cause of the failure                        | Character string                    |                                 |
-|occurrence       | the likelihood of the cause                 | Integer (typically between 1 and 10)| risk_disutility; risk_controls  |
-|hazard           | hazard = severity x occurrence              | Calculated numeric                  |                                 |
+|occurrence       | the likelihood of the cause                 | Integer (1 to 10)| risk_disutility; risk_controls  |
+|hazard           | hazard = severity x occurrence              | Calculated numeric (1 to 100)                  |                                 |
 |controls         | what will detect the failure or cause       | Character string                    |                                 |
-|detection        | the effectiveness of the controls           | Integer (typically between 1 and 10)| risk_disutility; risk_controls  |
-|rpn              | rpn = severity x occurrence x detection     | Calculated numeric                  |                                 |
+|detection        | the effectiveness of the controls           | Integer (1 to 10)| risk_disutility; risk_controls  |
+|rpn              | rpn = severity x occurrence x detection     | Calculated numeric (1 to 1000)                 |                                 |
 |mitigation       | how to mitigate the failure                 | Character string                    |                                 |
 |responsibility   | who owns the mitigation activity            | Character string                    |                                 |
 |date             | when the mitigation will be completed       | Date                                |                                 |
 |mitigation_status| status of the mitigation activity           | Character string                    |                                 |
-|sev_1            | updated severity after mitigation           | Integer (typically between 1 and 10)|                                 |
-|occ_1            | updated occurrence after mitigation         | Integer (typically between 1 and 10)|                                 |
-|haz_1            | updated hazard                              | Calculated numeric                  |                                 |
-|det_1            | updated detection after mitigation          | Integer (typically between 1 and 10)|                                 |
-|rpn_1            | updated risk priority number                | Calculated numeric                  |                                 |
-|verified         | was the risk mitigation action verified ?   | yes/no                              |                                 |
-|validated        | was the risk mitigation action validated?   | yes/no                              |                                 |
-|record           | evidence or record type                     | categorical                         |                                 |
-|date_1           | update date for mitigation                  | date                                |                                 |
+|sev_1            | updated severity after mitigation           | Integer (1 to 10)|                                 |
+|occ_1            | updated occurrence after mitigation         | Integer (1 to 10)|                                 |
+|haz_1            | updated hazard                              | Calculated numeric (1 to 100)                  |                                 |
+|det_1            | updated detection after mitigation          | Integer (1 to 10)|                                 |
+|rpn_1            | updated risk priority number                | Calculated numeric (1 to 1000)                 |                          |record           | evidence or record type                     | categorical                         |                                 |
+|date_1           | update date for mitigation                  | date                                |                          
+|
+
+***
 
 ### Validation and Verification
 
@@ -77,12 +89,15 @@ Note: Verification may involve recreation of the problems to determine if suspec
 
 Note: A “show me” will be a demonstration of validation i.e. that a sustainable system of reliable detection controls exist. 
 
+***
 
 ### Travis Badge
 
 The following indicates the status of the most recent build with Travis:
 
 [![Build Status](https://travis-ci.org/cowboy2718/FMEA.svg?branch=master)](https://travis-ci.org/cowboy2718/FMEA)
+
+***
 
 ### Risk Assessment and Management References:
 
@@ -99,6 +114,8 @@ MacKenzie, Cameron, "Summarizing Risk Using Risk Measures and Risk Indices," pee
 Roland, Harold E., and Brian Moriarty, *System Safety Engineering and Managements*, John Wiley and Sons, New York, 1983, pp. 187 - 193.
 
 Tversky, Amos, and Daniel Kahneman, "Judgement Under Uncertainty: Heuristics and Biases," *Science*, New Series, Vol. 185, No. 4157. (Sep. 27, 1974), pp. 1124-1131.
+
+***
 
 ### Useful Links in the Development of this Package:
 
