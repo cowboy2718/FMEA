@@ -9,12 +9,15 @@ Description: Provide descriptive risk charts from an FMEA exercise and data set.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-VignetteBuilder: utils  
+VignetteBuilder: utils  ,
+    knitr
 RoxygenNote: 6.1.0
 Suggests: dplyr,
     ggrepel,
     ggplot2,
-    magrittr
+    magrittr,
+    knitr,
+    rmarkdown
 Imports: ggplot2,
     dplyr,
     ggrepel,

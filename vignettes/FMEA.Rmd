@@ -1,0 +1,75 @@
+---
+title: "FMEA"
+author: "Tony Gojanovic"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## FMEA Package Overview
+
+This simple package graphs output from an Failure Mode Effects (FMEA) onto a hazard or disutility graph (failure occurrence by failure severity) and a controls graph (failure detection by failure occurrence).  It also provides risk zones on the hazard graph along with labels of items from your FMEA worksheet.
+
+## Package Usage
+
+This package imports a file (usually in Excel) and then plots scatterplot type graphs to understand risk.  The code can be incorporated into a markdown report or however desired.
+
+## R Packages
+
+The following R packages are used:
+
+```{r eval=FALSE, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(dplyr)
+library(ggrepel)
+```
+
+## Minimum Data Requirements
+
+The data table must have the following field names:
+
+item_no  
+severity  
+occurrence
+detection  
+
+Of course, there will be other fields included.  See the example data sheet called **fmea_working_file.xls** for a complete listing of fields and names (found under inst\ extdata).
+
+## Making the graphs
+
+The following code shows how the graphs can be made:
+
+```{r eval=FALSE,warning=FALSE,message=FALSE}
+
+library(ggplot2)
+library(dplyr)
+library(ggrepel)
+
+# If importing an Excel worksheet, the following code chunk is to be used (based on your working directory).
+
+library(readxl)
+fmea_working_file <- read_excel("~/Data/Statistical Projects/R Projects/FMEA/inst/extdata/fmea_working_file.xls")
+
+# To make the hazard or disutility graph (with risk zones)
+
+risk_disutility(fmea_working_file)
+
+# To make the risk controls graph (no risk zones)
+
+risk_controls(fmea_working_file)
+
+```
+
+The graphs can then be incorporated into a risk report or presentation as needed.
+
+## References
+
+Zone configurations for the hazard or disutility graph is based on the following:
+
+Carlson, Carl S., *Effective FMEAs: Achieving Safe, Reliable, and Economical Products and Processes Using Failure Mode and Effects Analysis*, John Wiley and Sons, New York, 2012, p. 164. 
+
+Code can be altered to provide differing risk zone configurations.
+

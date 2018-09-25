@@ -5,15 +5,29 @@ June 2018
 
 ***
 
+### Travis Badge
+
+The following indicates the status of the most recent build with Travis:
+
+[![Build Status](https://travis-ci.org/cowboy2718/FMEA.svg?branch=master)](https://travis-ci.org/cowboy2718/FMEA)
+
+***
+
 ### Background
 
-This package creates a set of graphs for risk assessment and risk management. Specifically, severity, occurrence and detection as obtained through, for example, an FMEA exercise, are plotted.  However, other tools may also be used to obtaing severity, occurrence and detection value.
+This simple package creates a set of graphs for risk assessment and risk management. Specifically, severity, occurrence and detection as obtained through an FMEA exercise are plotted. 
 
 ***
 
 ### R Libraries
 
 The libraries ggplot, ggrepel and dplyr are used with this package.
+
+***
+
+### Usage
+
+See vignette files for specific details on usage.
 
 ***
 
@@ -26,6 +40,12 @@ A **disutility graph** or **hazard graph** is a scatterplot in which the undesir
 ### Controls | Risk Management
 
 Detection ability is plotted against occurrence orlikelihood of potential causes or mechanisms of failure.  Essentially, it depicts the state of risk management controls. Random "jitter" is added to the detection and likelihood values in order to provide a more interpretable graph.
+
+***
+
+### Ranking Tables
+
+Ranking tables for severity, occurrence and detection are typically on a 1 to 10 scale.  Definition of the differing levels can be found in FMEA literature or determined by the end user.
 
 ***
 
@@ -91,13 +111,7 @@ Note: A “show me” will be a demonstration of validation i.e. that a sustaina
 
 ***
 
-### Travis Badge
 
-The following indicates the status of the most recent build with Travis:
-
-[![Build Status](https://travis-ci.org/cowboy2718/FMEA.svg?branch=master)](https://travis-ci.org/cowboy2718/FMEA)
-
-***
 
 ### Risk Assessment and Management References:
 
